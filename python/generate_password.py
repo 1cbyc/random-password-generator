@@ -23,3 +23,5 @@ def generate_password(length):
     
     # convert the password characters to a string and return it
     return ''.join(password)
+password = generate_password(12)
+print(password)
