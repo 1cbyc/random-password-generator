@@ -1,3 +1,5 @@
+<?php
+
 function generate_password($length) {
     $lowercase_letters = 'abcdefghijklmnopqrstuvwxyz';
     $uppercase_letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -18,5 +20,8 @@ function generate_password($length) {
     
     return $password;
 }
+
 $password = generate_password(12);
 echo $password;
+
+?>
