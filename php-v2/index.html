@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1cbyc PG</title>
+</head>
+<body>
+    <h1>1cbyc PG</h1>
+    <p>Click this button to generate a unique random password:</p>
+    <button onclick="generatePassword()">Generate</button>
+    <p id="password"></p>
+    
+    <script>
+        function generatePassword() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("password").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "generate_password.php", true);
+            xhttp.send();
+        }
+    </script>
+</body>
+  <script src="generate_password.php"></script>
+</html>
