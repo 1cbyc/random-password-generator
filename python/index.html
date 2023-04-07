@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1cbyc Python PG </title>
+</head>
+<body>
+    <h1>1cbyc Python PG</h1>
+    <p>Click the button below to generate a random password:</p>
+    <button onclick="generatePassword()">Generate Password</button>
+    <p id="password"></p>
+    
+    <script>
+        function generatePassword() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("password").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "generate_password.php", true);
+            xhttp.send();
+        }
+    </script>
+</body>
+</html>
